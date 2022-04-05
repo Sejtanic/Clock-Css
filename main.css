@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+}
+p {
+  color: white;
+  font-size: 25px;
+  font-style: normal;
+}
+.fotter {
+  font-style: italic;
+  margin-top: 70px;
+  color: white;
+}
+.container {
+  padding: 10px;
+  height: 500px;
+  width: 500px;
+  background-color: black;
+  border-radius: 50%;
+  /* border: solid 5px black; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.number {
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+.box1 {
+  top: 10px;
+  left: 240px;
+  height: 480px;
+  flex-direction: column;
+}
+.box2 {
+  left: 114px;
+  top: 50px;
+  height: 400px;
+  flex-direction: column;
+}
+.box3 {
+  right: 114px;
+  top: 50px;
+  height: 400px;
+  flex-direction: column;
+}
+.box4 {
+  flex-direction: row;
+  width: 480px;
+}
+.box5 {
+  left: 40px;
+  width: 420px;
+  flex-direction: row;
+  top: 130px;
+}
+.box6 {
+  left: 40px;
+  bottom: 130px;
+  width: 420px;
+}
+.second {
+  position: absolute;
+  height: 4px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* transform: rotate(90deg); */
+  animation: seconds 60s linear;
+  z-index: 3;
+  animation-iteration-count: infinite;
+  border-radius: 2px;
+}
+.line1 {
+  background-color: white;
+  border: solid 1px black;
+  height: 100%;
+  border-radius: 3px;
+}
+.minute {
+  position: absolute;
+  height: 6px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: minutes 3600s linear;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+.line3 {
+  height: 100%;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 3px;
+}
+.hour {
+  position: absolute;
+  height: 8px;
+  width: 70%;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  animation: hours 43200s linear;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+.line5 {
+  height: 100%;
+  border: solid 1px black;
+  background-color: white;
+  border-radius: 3px;
+}
+
+@keyframes seconds {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes minutes {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hours {
+  100% {
+    transform: rotate(360deg);
+  }
+}
